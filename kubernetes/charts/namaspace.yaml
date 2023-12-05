@@ -1,0 +1,10 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: gha-runner-scale-set-controller
+
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: gha-runner-scale-set

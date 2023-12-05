@@ -1,0 +1,13 @@
+githubConfigSecret:
+    github_token: {{ env "GITHUB_TOKEN" }}
+
+runnerScaleSetName: "gha-runner-scale-set-sample"
+
+githubConfigUrl: "https://github.com/Akito-Fujihara/ARC-AutoScalingRunnerScaleSet"
+
+minRunners: 1
+maxRunners: 3
+
+controllerServiceAccount:
+  namespace: gha-runner-scale-set-controller
+  name: grss-controller-gha-rs-controller

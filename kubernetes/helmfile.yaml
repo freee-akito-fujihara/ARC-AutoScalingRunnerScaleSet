@@ -1,0 +1,17 @@
+releases:
+- name: charts
+  chart: ./charts
+
+- name: arss-controller
+  namespace: gha-runner-scale-set-controller
+  forceNamespace: gha-runner-scale-set-controller
+  chart: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
+  version: 0.7.0
+
+- name: arss
+  namespace: gha-runner-scale-set
+  forceNamespace: gha-runner-scale-set
+  chart: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+  version: 0.7.0
+  values:
+  - ./values.yaml.gotmpl
